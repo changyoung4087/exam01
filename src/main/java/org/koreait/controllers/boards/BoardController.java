@@ -31,6 +31,6 @@ public class BoardController {
 
         service.write(boardForm);
 
-        return"redirect:/board/list";
+        return "redirect:/board/list";
     }
 }

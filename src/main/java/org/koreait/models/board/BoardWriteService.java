@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class BoardWriteService {
+
     private BoardDAO boardDao;
     @Autowired
     public void setBoardDao(BoardDAO boardDao) {
