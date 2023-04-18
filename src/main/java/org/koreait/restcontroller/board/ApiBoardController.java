@@ -30,15 +30,14 @@ public class ApiBoardController {
 //        return list;
 //    }
     @GetMapping
-    public ResponseEntity<JSONResult<List<Object>>> boardList(){
+    public ResponseEntity<JSONResult<List<Board>>> boardList(){
 
         List<Board> list = boardDao.gets();
         JSONResult<List<Board>> jsonResult = new JSONResult<>();
         jsonResult.setSuccess(true);
         jsonResult.setData(list);
 
-        //return ResponseEntity.ok(jsonResult);
-        return null;
+        return ResponseEntity.ok(jsonResult);
     }
 
     @GetMapping("/{id}")
